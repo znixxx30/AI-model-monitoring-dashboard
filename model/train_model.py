@@ -21,7 +21,7 @@ vectorizer = TfidfVectorizer()
 X_train_vec = vectorizer.fit_transform(X_train)
 
 # train model
-model = LogisticRegression()
+model = LogisticRegression(max_iter=1000)
 model.fit(X_train_vec, y_train)
 
 # save model
